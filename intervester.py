@@ -7,31 +7,31 @@ SAVING_PERIOD = 10
 
 
 def ask_capital():
-    value = input(f'Your Start Capital (ENTER for: {START_CAPITAL} €): ')
+    value = input(f'> The start capital (ENTER = {START_CAPITAL} €): ')
     if (value == ''):
         return START_CAPITAL
     return float(value)
 
 def ask_payment():
-    value = input(f'Your monthly payment (ENTER for: {MONTHLY_PAYMENT} €): ')
+    value = input(f'> The monthly payment (ENTER = {MONTHLY_PAYMENT} €): ')
     if (value == ''):
         return MONTHLY_PAYMENT
     return float(value)
 
 def ask_interest():
-    value = input(f'The interest rate (p.a.) (ENTER for: {INTEREST_RATE * 100} %): ')
+    value = input(f'> The interest rate (p.a.) (ENTER = {INTEREST_RATE * 100} %): ')
     if (value == ''):
         return INTEREST_RATE
     return float(value) / 100.0
 
 def ask_payout_rate():
-    value = input(f'The payout rate: (ENTER for {PAYOUT_RATE} - yearly = 1, monthly = 12, daily = 365): ')
+    value = input(f'> The payout rate: (ENTER = {PAYOUT_RATE} - yearly = 1, monthly = 12, daily = 365): ')
     if (value == ''):
         return PAYOUT_RATE
     return int(value)
 
 def ask_period():
-    value = input(f'The saving period: (ENTER for {SAVING_PERIOD} years): ')
+    value = input(f'> The saving period: (ENTER = {SAVING_PERIOD} years): ')
     if (value == ''):
         return SAVING_PERIOD
     return int(value)
@@ -83,6 +83,8 @@ def calc_yearly():
 
 
 def calculate_interest():
+    print('\n'*12)
+    print('###   I N T E R V E S T E R   ###\n\n')
     ask_values()
 
     if PAYOUT_RATE < 12:
