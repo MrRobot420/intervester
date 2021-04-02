@@ -62,9 +62,9 @@ def calc_montly_or_daily():
         total_payments += MONTHLY_PAYMENT
         # print(f'month {month+1}: {total_capital}')
 
-    print(f'\n\nEND: {total_capital} €')
-    print(f'TOTAL DEPOSITS: {total_payments + START_CAPITAL} €')
-    print(f'TOTAL INTEREST EARNED: {total_capital - START_CAPITAL - total_payments} €')
+    print(f'\n\nEND: {"{:.2f}".format(total_capital)} €')
+    print(f'TOTAL DEPOSITS: {"{:.2f}".format(total_payments + START_CAPITAL)} €')
+    print(f'TOTAL INTEREST EARNED: {"{:.2f}".format(total_capital - START_CAPITAL - total_payments)} €')
 
 
 def calc_yearly():
