@@ -77,9 +77,9 @@ def calc_yearly():
         total_capital += MONTHLY_PAYMENT
         total_payments += MONTHLY_PAYMENT
     
-    print(f'\n\nYEARLY END: {total_capital} €')
-    print(f'TOTAL DEPOSITS: {total_payments + START_CAPITAL} €')
-    print(f'TOTAL INTEREST EARNED: {total_capital - START_CAPITAL - total_payments} €')
+    print(f'\n\nYEARLY END: {"{:.2f}".format(total_capital)} €')
+    print(f'TOTAL DEPOSITS: {"{:.2f}".format(total_payments + START_CAPITAL)} €')
+    print(f'TOTAL INTEREST EARNED: {"{:.2f}".format(total_capital - START_CAPITAL - total_payments)} €')
 
 
 def calculate_interest():
